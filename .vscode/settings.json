@@ -1,0 +1,5 @@
+{
+    "jupyter.themeMatplotlibPlots": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.globalModuleInstallation": true
+}
