@@ -12,7 +12,7 @@ if hist_button: # se o botão for clicado
 # escrever uma mensagem
     st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
     # criar um histograma
-    fig_hist = px.histogram(car_data, x="odometer")
+    fig_hist = px.histogram(car_data, x="condition")
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig_hist, use_container_width=True)
 
@@ -20,7 +20,7 @@ if scatter_button: # se o botão for clicado
 # escrever uma mensagem
     st.write('Criando um gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
     # criar um gráfico de dispersão
-    fig_scatter = px.scatter(car_data, x="odometer")
+    fig_scatter = px.scatter(car_data, x="model_year", y="price")
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig_scatter, use_container_width=True)
 
