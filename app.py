@@ -21,7 +21,7 @@ if scatter_button: # se o botão for clicado
 # escrever uma mensagem
     st.write('Gráfico de dispersão sobre anúncios de vendas de carros: ano de fabricação v preço')
     # criar um gráfico de dispersão
-    fig_scatter = px.scatter(car_data, x="model_year", x_label="Ano de fabricação", y="price", y_label="Preço")
+    fig_scatter = px.scatter(car_data, x="model_year", y="price")
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig_scatter, use_container_width=True)
 
