@@ -25,21 +25,19 @@ if scatter_button: # se o botão for clicado
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig_scatter, use_container_width=True)
 
-# criar uma caixa de seleção
-build_histogram = st.checkbox('Criar um histograma')
+# criar caixas de seleção
+build_histogram = st.checkbox('Gerar um histograma dos anúncios pela condição dos veículos')
+build_scatter = st.checkbox('Gerar um gráfico de dispersão sobre anúncios cruzando o ano de fabricação do veículo com o seu preço de venda')
 
-if build_histogram: # se a caixa de seleção for selecionada
-# escrever uma mensagem
+if build_histogram: # se o histograma for selecionado
+# escrever a mensagem
     st.write('Histograma de anúncios de vendas de carros de acordo com a condição do veículo')
     # criar um histograma
     fig_hist = px.histogram(car_data, x="condition")
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig_hist, use_container_width=True)
-
-build_scatter = st.checkbox('Criar um histograma')
-
-if build_scatter: # se a caixa de seleção for selecionada
-# escrever uma mensagem
+if build_scatter: # se o gráfico de dispersão for selecionado
+# escrever a mensagem
     st.write('Gráfico de dispersão sobre anúncios de vendas de carros: ano de fabricação v preço')
     # criar um gráfico de dispersão
     fig_scatter = px.scatter(car_data, x="model_year", y="price")
