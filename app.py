@@ -5,13 +5,14 @@ import streamlit as st
 car_data = pd.read_csv('vehicles.csv') # lendo os dados
 
 st.header('Visualização interativa de dados sobre anúncios de veículos') # cabeçalho explicativo
-st.write('Para ver mais de um gráfico simultaneamente, use as caixas de seleção abaixo:')
+st.write('Para ver mais de um gráfico simultaneamente, use as caixas de seleção abaixo.')
+st.write('Para ver o histograma de condição dos veículos anunciados, use o botão ao final.')
 
 # criar caixas de seleção
-hist_price = st.checkbox('Ver somente o histograma de preço') # criar uma caixa de seleção para o histograma de preço
-hist_year = st.checkbox('Ver somente o histograma de ano de fabricação') # criar uma caixa de seleção para o histograma de ano
-scatter_button = st.checkbox('Ver somente o gráfico de dispersão') # criar uma caixa de seleção para o gráfico de dispersão
-pie_fuel = st.checkbox('Ver somente o gráfico de pizza de tipo de combustível') # criar uma caixa de seleção para o gráfico de pizza
+hist_price = st.checkbox('Histograma de Preço') # criar uma caixa de seleção para o histograma de preço
+hist_year = st.checkbox('Histograma de Ano de Fabricação') # criar uma caixa de seleção para o histograma de ano
+scatter_button = st.checkbox('Gráfico de dispersão entre Ano de Fabricação vs Preço do Veículo') # criar uma caixa de seleção para o gráfico de dispersão
+pie_fuel = st.checkbox('Gráfico de pizza de Tipo de Combustível') # criar uma caixa de seleção para o gráfico de pizza
 
 if hist_price: # se o histograma de preço for clicado
 # escrever uma mensagem
@@ -46,7 +47,7 @@ if pie_fuel: # se o gráfico de pizza for clicado
     st.plotly_chart(fig_fuel, use_container_width=True)
 
 # Criar botão de histograma
-build_histogram = st.button('Gerando histograma dos anúncios pela condição dos veículos')
+build_histogram = st.button('Histograma da condição dos veículos anunciados')
 
 if build_histogram: # se o histograma for selecionado
 # escrever a mensagem
