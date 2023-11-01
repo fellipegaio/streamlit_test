@@ -41,7 +41,7 @@ if pie_fuel: # se o gráfico de pizza for clicado
 # escrever uma mensagem
     st.write('Gráfico de pizza dos tipos de combustível nos anúncios')
     # criar um gráfico de pizza
-    fig_fuel = px.pie(df, names='fuel')
+    fig_fuel = px.pie(car_data, names='fuel')
     # exibir um gráfico Plotly interativo
     st.plotly_chart(fig_fuel, use_container_width=True)
 
