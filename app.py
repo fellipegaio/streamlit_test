@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
      
-car_data = pd.read_csv('vehicles.csv', 'rb') # lendo os dados
+car_data = pd.read_csv('vehicles.csv') # lendo os dados
 
 st.header('Visualização interativa de dados sobre anúncios de veículos') # cabeçalho explicativo
 st.write('Para ver mais de um gráfico simultaneamente, use as caixas de seleção abaixo:')
