@@ -1,14 +1,13 @@
 # dashboard
-Neste projeto, eu desenvolvo um aplicativo web de visualização de dados sobre venda de carros e faço sua implementação em um serviço de nuvem que faz dele acessível ao público.
+In this project, I developed a web application for data visualization of car sales and implementing it on a cloud service to make it accessible to the public.
 
+Users interact with the interface and can choose to view multiple charts simultaneously (using checkboxes) or only one of them (using the button).
 
-O usuário interage com a interface e pode escolher se deseja visualizar gráficos simultaneamente (com as caixas de seleção) ou apenas um deles (usando o botão).
+Available charts:
+- Price Histogram
+- Manufacturing Year Histogram
+- Scatter Plot between Manufacturing Year and Price
+- Fuel Type Pie Chart
+- Vehicle Condition Histogram (button)
 
-Gráficos disponíveis:
-- Histograma de preço
-- Histograma de ano de fabrição
-- Gráfico de dispersão entre ano de fabricação e preço
-- Gráfico de pizza de tipo de combustível
-- Histograma de condição dos veículos (botão)
-
-O aplicativo web está disponível para acesso em https://dashboard-283f.onrender.com/
+The web application is accessible at https://dashboard-283f.onrender.com/.
