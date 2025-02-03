@@ -3,6 +3,7 @@
 In this project, I developed a web application for data visualization.
 
 **Tools used**
+
 Pandas
 Plotly.express
 Streamlit
